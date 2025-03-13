@@ -170,7 +170,6 @@ export const ChatMessage = React.memo(
               <a
                 key={a.id}
                 className="doc-item"
-                // target="_blank"
                 href={`${BASE_API_URL}/chats/get-file?attId=${a.id}`}
                 download={a.filename}
               >

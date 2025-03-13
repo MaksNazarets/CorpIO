@@ -28,7 +28,6 @@ type Props = {
 export const ChatHeader = ({ chatData, chatType }: Props) => {
   const { chatId } = useParams();
   const [lastTimeOnline, setLastTimeOnline] = useState<string | null>(null);
-  // const [_chatData, setChatData] = useState(chatData);
 
   const { setProfileViewerUserId, setGroupMemberViewerGroupId } =
     useModalWindowsContext();
@@ -53,13 +52,6 @@ export const ChatHeader = ({ chatData, chatType }: Props) => {
         console.log("lastTimeOnline changed");
       }, 30000);
     }
-
-    // chatType === "p" &&
-    //   socket?.on("user online status changed", (data) => {
-    //     if (data.userId === chatData?.userId) {
-    //       setChatData((prev: any) => ({ ...prev, isOnline: data.isOnline }));
-    //     }
-    //   });
 
     return () => {
       timeout && clearInterval(timeout);

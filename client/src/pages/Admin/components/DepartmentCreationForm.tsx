@@ -25,7 +25,6 @@ export const DepartmentCreationForm = () => {
   const [departmentData, setDepartmentData] = useState<DepartmentToCreate>(
     initialDepartmentData
   );
-  // const [userList, setUserList] = useState([]);
 
   const [isPending, setIsPending] = useState(false);
   const [message, setMessage] = useState<MessageType | null>(null);
@@ -35,50 +34,6 @@ export const DepartmentCreationForm = () => {
     from: { transform: "translateY(10px)", opacity: 0 },
     to: { transform: "translateY(0)", opacity: 1 },
   });
-
-  // const getUserListByStr = useCallback(async (str: string) => {
-  //   cancelTokenSource.cancel("Request canceled");
-
-  //   // Create a new cancel token source for the current request
-  //   const newCancelTokenSource = axios.CancelToken.source();
-
-  //   // Set the new cancel token for the current request
-  //   cancelTokenSource = newCancelTokenSource;
-
-  //   try {
-  //     const response = await axiosInstance.get("/users/get?str=" + str, {
-  //       params: { str },
-  //       cancelToken: newCancelTokenSource.token,
-  //     });
-
-  //     const userList = response.data.users;
-
-  //     if (userList) {
-  //       setUserList(
-  //         userList.map((user: any) => ({
-  //           value: user.id.toString(),
-  //           text: `${user.lastName} ${user.firstName.charAt(0)}. ${
-  //             user.patronymic ? user.patronymic.charAt(0) + "." : ""
-  //           }`,
-  //         }))
-  //       );
-  //     } else {
-  //       console.error("Error fetching user list");
-  //     }
-  //   } catch (error: any) {
-  //     if (isCancel(error)) {
-  //       console.log("Request canceled:", error.message);
-  //     } else {
-  //       console.error("Error fetching user list:", error.message);
-  //     }
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   getUserListByStr().then((result) => {
-  //     setDepartmentList(result.filter((i: any) => i.value != 1));
-  //   });
-  // }, []);
 
   const showMessage = (msg: MessageType) => {
     setMessage(msg);

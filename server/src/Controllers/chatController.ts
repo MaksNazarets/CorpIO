@@ -669,18 +669,6 @@ export const getGroups = async (req: Request, res: Response) => {
         },
       });
 
-      // const gs = await GroupChat.createQueryBuilder()
-      //   .addSelect("name")
-      //   .addSelect('"isPrivate"')
-      //   .addSelect("creator.id")
-      //   .addSelect("creator.firstName")
-      //   .addSelect("creator.lastName")
-      //   .addSelect("members")
-      //   .leftJoin("GroupChat.creator", "creator")
-      //   .leftJoin("GroupChat.members", "members")
-      //   .getMany();
-      // console.log("=====: ", gs);
-
       groups = groups.map((g) => {
         const { id, name, members, creator, ...gr } = g;
 

@@ -146,18 +146,6 @@ export const MessengerProvider = ({ children }: AuthProviderProps) => {
     }
   }, [socket]);
 
-  // const addChat = (
-  //   type: "p" | "g" | "c",
-  //   data: PrivateChatListItem | GroupChatListItem
-  // ) => {
-  //   if (type === "p") {
-  //     if(data.id )
-  //     setChats((prev: Chats) => {
-  //       return prev && { ...prev, privateChats: [data, ...prev.privateChats] };
-  //     });
-  //   }
-  // };
-
   return (
     <MessengerContext.Provider
       value={{
